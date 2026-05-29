@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexettel — Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for the Nexettel mobile application, operated by Vendoprime e.U., outlining data collection, GDPR compliance, and user rights.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Sleek HSL Color Palette */
+            --bg-color: #0b0f19;
+            --text-color: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-color: #f59e0b; /* Amber accent matching NexColors.amber */
+            --accent-hover: #d97706;
+            --card-bg: rgba(30, 41, 59, 0.4);
+            --card-border: rgba(255, 255, 255, 0.05);
+            --header-bg: rgba(15, 23, 42, 0.6);
+            --divider: rgba(245, 158, 11, 0.08);
+            --shadow: rgba(0, 0, 0, 0.3);
+            --glow: rgba(245, 158, 11, 0.1);
+        }
+
+        /* Responsive light theme preference support */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --text-color: #0f172a;
+                --text-secondary: #475569;
+                --accent-color: #d97706;
+                --accent-hover: #b45309;
+                --card-bg: rgba(255, 255, 255, 0.7);
+                --card-border: rgba(15, 23, 42, 0.06);
+                --header-bg: rgba(255, 255, 255, 0.85);
+                --divider: rgba(217, 119, 6, 0.1);
+                --shadow: rgba(15, 23, 42, 0.05);
+                --glow: rgba(217, 119, 6, 0.05);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding-bottom: 80px;
+        }
+
+        /* Animated glowing background blobs for dark mode premium aesthetic */
+        .bg-glow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--glow) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(40px);
+            opacity: 0.8;
+            animation: float 12s ease-in-out infinite alternate;
+        }
+
+        .bg-glow:nth-child(1) {
+            top: -100px;
+            right: -100px;
+        }
+
+        .bg-glow:nth-child(2) {
+            bottom: -150px;
+            left: -100px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, rgba(0,0,0,0) 70%); /* subtle blue contrast */
+            animation-delay: -6s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 30px) scale(1.1); }
+        }
+
+        /* Glassmorphism Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--divider);
+            box-shadow: 0 4px 30px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--accent-color), #f97316);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, var(--text-color), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Banner */
+        .hero {
+            max-width: 800px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .last-updated::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+
+        /* Content Container */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Policy Sections (Cards) */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px var(--shadow);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            color: var(--text-color);
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        ul:last-child {
+            margin-bottom: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-color);
+            font-size: 15px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 16px;
+            top: -1px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed var(--accent-color);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+            border-bottom-style: solid;
+        }
+
+        /* Footer contact information */
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--divider);
+        }
+
+        .contact-item {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item strong {
+            color: var(--text-color);
+        }
+
+        /* Footer copyright */
+        footer {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* Responsive Design tweaks */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            section {
+                padding: 20px;
+            }
+            .header-content {
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow-container">
+        <div class="bg-glow"></div>
+        <div class="bg-glow"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-group">
+                <div class="logo-icon">N</div>
+                <div class="logo-text">Nexettel</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>Privacy Policy</h1>
+        <div class="last-updated">Last updated: March 2026</div>
+    </div>
+
+    <main>
+        <!-- Overview -->
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>Nexettel ("we", "our", "the app") is committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights under GDPR (EU Regulation 2016/679).</p>
+            <p>Nexettel is a brand operated by <strong>Vendoprime e.U.</strong>, a registered Austrian sole trader (Einzelunternehmen) based in Vienna, Austria.</p>
+        </section>
+
+        <!-- Data We Collect -->
+        <section id="data-collection">
+            <h2>Data We Collect</h2>
+            <p><strong>MVP Phase (current):</strong> No personal data is stored on our servers. Step progress, language preference, and onboarding status are stored locally on your device using SharedPreferences only.</p>
+            <p><strong>Firebase Authentication (if you create an account):</strong> We store your email address and display name via Google Firebase. Firebase is GDPR-compliant and stores data in EU data centres.</p>
+        </section>
+
+        <!-- How We Use Your Data -->
+        <section id="data-usage">
+            <h2>How We Use Your Data</h2>
+            <ul>
+                <li>To display your progress across app restarts</li>
+                <li>To remember your language preference</li>
+                <li>To authenticate you securely (email/password or Google)</li>
+                <li>We never sell, rent, or share your data with third parties</li>
+                <li>We never use your data for advertising purposes</li>
+            </ul>
+        </section>
+
+        <!-- NexBot AI Chat -->
+        <section id="nexbot-chat">
+            <h2>NexBot AI Chat</h2>
+            <p>Your chat messages are sent to Google Gemini AI for processing. Messages are not stored permanently by Nexettel.</p>
+            <p>Please review Google's AI data usage policy at <a href="https://ai.google.dev" target="_blank" rel="noopener">ai.google.dev</a>. Do not share sensitive personal information (passport numbers, bank details) in chat messages.</p>
+        </section>
+
+        <!-- Your Rights (GDPR) -->
+        <section id="gdpr-rights">
+            <h2>Your Rights (GDPR)</h2>
+            <p>Under GDPR you have the right to:</p>
+            <ul>
+                <li>Access the personal data we hold about you</li>
+                <li>Correct inaccurate personal data</li>
+                <li>Delete your account and all associated data (Article 17)</li>
+                <li>Data portability</li>
+                <li>Object to processing</li>
+            </ul>
+            <p>To exercise any of these rights, contact us at: <a href="mailto:Vendoprime19@gmail.com">Vendoprime19@gmail.com</a></p>
+        </section>
+
+        <!-- Data Retention -->
+        <section id="data-retention">
+            <h2>Data Retention</h2>
+            <p><strong>Local device data:</strong> Retained until you uninstall the app or clear app data.</p>
+            <p><strong>Firebase account data:</strong> Retained until you delete your account via Profile &gt; Settings &gt; Delete Account. All cloud data is permanently deleted within 30 days of account deletion, in compliance with GDPR Article 17.</p>
+        </section>
+
+        <!-- Third-Party Services -->
+        <section id="third-party">
+            <h2>Third-Party Services</h2>
+            <p>Nexettel uses the following third-party services:</p>
+            <ul>
+                <li>Google Firebase (authentication, optional cloud sync)</li>
+                <li>Google Gemini AI (NexBot chat responses)</li>
+                <li>Google Play (app distribution, in-app purchases)</li>
+            </ul>
+            <p>Each service has its own privacy policy. We only share data with these services to the extent necessary to provide the app's functionality.</p>
+        </section>
+
+        <!-- Children's Privacy -->
+        <section id="children-privacy">
+            <h2>Children's Privacy</h2>
+            <p>Nexettel is not intended for use by children under 16 years of age. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us immediately at <a href="mailto:Vendoprime19@gmail.com">Vendoprime19@gmail.com</a>.</p>
+        </section>
+
+        <!-- Changes to This Policy -->
+        <section id="policy-changes">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of significant changes via the app. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact & Legal Information</h2>
+            <p>Data Controller: Vendoprime e.U. (operating as Nexettel)</p>
+            <div class="contact-info">
+                <div class="contact-item"><strong>Company:</strong> Vendoprime e.U.</div>
+                <div class="contact-item"><strong>Address:</strong> Forsthausgasse 10/D1, 1200 Vienna, Austria</div>
+                <div class="contact-item"><strong>UID-Nummer:</strong> ATU81603702</div>
+                <div class="contact-item"><strong>Firmenbuchnummer:</strong> 628170f</div>
+                <div class="contact-item"><strong>Email:</strong> <a href="mailto:Vendoprime19@gmail.com">Vendoprime19@gmail.com</a></div>
+            </div>
+            <p style="margin-top: 16px;">For GDPR complaints, you also have the right to lodge a complaint with the Austrian Data Protection Authority (Datenschutzbehörde): <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a></p>
+        </section>
+
+        <!-- Legal Disclaimer -->
+        <section id="disclaimer">
+            <h2>Legal Disclaimer</h2>
+            <p>Nexettel provides general guidance on Austrian bureaucratic processes for informational purposes only. This does not constitute legal advice. Always verify information with official Austrian government sources. We are not responsible for decisions made based on information in this app.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vendoprime e.U. All rights reserved.</p>
+        <p>Nexettel is an independent service and is not affiliated with the Austrian government.</p>
+    </footer>
+</body>
+</html>
